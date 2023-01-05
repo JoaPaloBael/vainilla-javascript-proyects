@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;500;800&display=swap');
+/* font-family: 'Nabla', cursive; */
+/*font-family: 'Azeret Mono', monospace;*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Azeret Mono', monospace;
+}
+
+body{
+  background-color: beige;
+}
+
+nav{
+  background-image: linear-gradient(to right, #510349 , #b304a1);
+  padding: 1rem;
+}
+
+nav h1{
+  color: white;
+  font-size: 3.5rem;
+  font-family: 'Nabla', cursive;
+  margin-left: 5rem;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem auto;
+  background-color: #510349;
+  max-width: 550px;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.counter{
+  color: white;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+
+.btn{
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: beige;
+  color: black;
+  text-transform: uppercase;
+}
+
+.btn:hover{
+  box-shadow: inset -3px -3px 3px #b4b4b456;
+  transition: all .2s;
+  background-color: black;
+  color: white;
+
+}
