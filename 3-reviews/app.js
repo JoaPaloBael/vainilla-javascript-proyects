@@ -38,57 +38,60 @@ const reviews = [
   },
 ];
 
+//Guardo los elementos del DOM
+let img = document.querySelector("#person-img") ;
+let author = document.querySelector("#author");
+let job = document.querySelector("#job") ;
+let info = document.querySelector("#info");
 
-//Guardamos en variables los elementos del DOM
+let prevBtn = document.querySelector(".prev-btn");
+let nextBtn = document.querySelector(".next-btn");
+let randomBtn = document.querySelector(".random-btn");
 
-const img = document.getElementById("person-img");
-const author = document.getElementById("author");
-const job = document.getElementById("job");
-const info = document.getElementById("info");
+//Setear el item actual
 
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const randomBtn = document.querySelector(".random-btn");
+let currentPerson = 0;
 
-// set starting item
-let currentItem = 0;
+//Cargar el item actual cuando se inicie el sitio con un evento
 
-// load initial item
 window.addEventListener('DOMContentLoaded', function(){
+  //Mostrame la persona
   showPerson();
 })
 
-//show person based on item
+//Creamos la funcion showPerson();
 function showPerson(){
-  const item = reviews[currentItem];
-  img.src = item.img;
-  author.textContent = item.name;
-  job.textContent = item.job;
-  info.textContent = item.text;
+  let person = reviews[currentPerson];
+  img.src = person.img;
+  author.textContent = person.name;
+  job.textContent = person.job;
+  info.textContent = person.text;
 }
 
-//Show next person
-
+//Creo una funcion para nextBtn
 nextBtn.addEventListener("click", function(){
-  currentItem++
-  if(currentItem > reviews.length - 1){
-    currentItem = 0;
+  currentPerson++;
+  //Creo un condicional para cuando currentPerson > reviews.lenght-1
+  // console.log(reviews.length);
+  if (currentPerson > reviews.length-1){
+    currentPerson = 0;
   }
   showPerson();
 })
 
-//Show prev person
+//Creo una funcion para prevBtn
 prevBtn.addEventListener("click", function(){
-  currentItem--
-  if(currentItem < 0){
-    currentItem = reviews.length - 1;
+  currentPerson--
+  if (currentPerson < 0) {
+    currentPerson = reviews.length-1;
   }
   showPerson();
 })
 
-// Show random person
+//Creo una funcion para randomBtn
+
 randomBtn.addEventListener("click", function(){
-  let randomNumber = Math.floor(Math.random()* (reviews.length));
-  currentItem = randomNumber;
+  let randomNumber = Math.floor(Math.random()* reviews.length);
+  currentPerson = randomNumber;
   showPerson();
 })
