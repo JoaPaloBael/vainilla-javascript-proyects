@@ -7,4 +7,5 @@ const links = document.querySelector('.links');
 menuIcon.addEventListener('click', function(){
     //Condicional: Si tiene la clase show-links, se la saco. Si no la tiene, la agrego.
     links.classList.toggle('show-links');
+    menuIcon.classList.toggle('rotation');
 })

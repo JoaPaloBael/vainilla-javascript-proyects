@@ -48,7 +48,7 @@
     border: 0;
     transition: .5s ease-in-out transform;
 }
-.menu-icon:hover{
+.rotation{
     transform: rotate(-90deg);
     color: #242424;
 }
