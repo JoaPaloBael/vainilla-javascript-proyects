@@ -7,7 +7,7 @@ const color = document.querySelector('.color');
 // Escucho el click del botón
 btn.addEventListener('click', function(){
     console.log("You've clicked me ;) ");
-    // Conseguir un número random entre el 0 y el 4 (es el largo del array);
+    // Conseguir un número random entre el 0 y el 7 (es el largo del array);
     const randomNumber = getRandomNumber ();
     console.log(colors[randomNumber]);
     // Cambio el color de fondo
